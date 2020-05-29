@@ -1,0 +1,27 @@
+{
+  "name": "syllabus",
+  "version": "1.0.0",
+  "description": "This is the course material for Code Your Future, a not-for-profit volunteer-run coding school for refugees and asylum seekers.",
+  "homepage": "https://codeyourfuture.io/",
+  "bugs": {
+    "url": "https://github.com/CodeYourFuture/syllabus/issues"
+  },
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeYourFuture/syllabus.git"
+  },
+  "scripts": {
+    "serve": "gitbook install && gitbook serve",
+    "build": "gitbook install && gitbook build",
+    "test": "markdownlint ./html-css ./js-core"
+  },
+  "dependencies": {
+    "gitbook": "^3.2.3",
+    "gitbook-plugin-prism": "^2.4.0"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.2",
+    "markdownlint-cli": "^0.17.0"
+  }
+}
