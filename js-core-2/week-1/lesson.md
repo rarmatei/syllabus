@@ -461,7 +461,7 @@ athlete.sayHi(); // returns "Hi everybody!"
 
 A person named Alice is defined below.
   1. Add a method "greet" so this person can say hello.
-  2. Add a method "sayName" so this person can say their own name. Hint: use 'this' keyword to access the name property.
+  2. Add a method "sayName" so this person can say their own name.
 
 */
 
@@ -648,13 +648,13 @@ the number of customers in the restaurant at the moment and the menu with prices
 
 We want to build an object to simulate a Restaurant Finder application (see below restaurantFinderApplication).
 
-1) Define a method findAvailableRestaurants which takes a number of people in parameter and returns
+1) Write a function findAvailableRestaurants which takes a number of people in parameter and returns
 all the restaurant names which have the required number of seats available at the moment.
 
-2) Define a method findRestaurantServingDish which takes a dish name in parameter and returns
+2) Write a function findRestaurantServingDish which takes a dish name in parameter and returns
 all the restaurant names serving this dish.
 
-3) Define a method countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west),
+3) Write a function countNumberOfRestaurantsInArea which takes an area of Glasgow in parameter (center, west),
 and returns the number of restaurants in this area.
 */
 
@@ -694,44 +694,24 @@ let restaurant3 = {
 let restaurants = [restaurant1, restaurant2, restaurant3];
 
 /*
-DO NOT EDIT ANYTHING ABOVE THIS LINE
-WRITE YOUR CODE BELOW
-*/
-
-let restaurantFinderApplication = {
-  applicationName: "Restaurant Finder",
-  applicationVersion: "1.0",
-  restaurants: restaurants,
-  findAvailableRestaurants: function (numberOfPeople) {
-    // Complete here
-  },
-  findRestaurantServingDish: function (dishName) {
-    // Complete here
-  },
-  countNumberOfRestaurantsInArea: function (area) {
-    // Complete here
-  },
-};
-
-/*
 DO NOT EDIT ANYTHING BELOW THIS LINE
 */
 
-let restaurantsAvailableFor5People = restaurantFinderApplication.findAvailableRestaurants(
-  5
-);
+let restaurantsAvailableFor5People = findAvailableRestaurants(restaurants, 5);
 console.log(
   `Find available restaurants for 5 people: Expected result: Ubiquitous Chip,Monkeyz, actual result: ${restaurantsAvailableFor5People}`
 );
 
 let restaurantsServingSalad = restaurantFinderApplication.findRestaurantServingDish(
+  restaurants,
   "salad"
 );
 console.log(
   `Find restaurants serving salad: Expected result: Paesano,Ubiquitous Chip, actual result: ${restaurantsServingSalad}`
 );
 
-let numberOfRestaurantsInCityCentre = restaurantFinderApplication.countNumberOfRestaurantsInArea(
+let numberOfRestaurantsInCityCentre = countNumberOfRestaurantsInArea(
+  restaurants,
   "center"
 );
 console.log(
