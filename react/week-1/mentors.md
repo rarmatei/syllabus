@@ -1,6 +1,16 @@
 # Mentor's Notes - React 1
 
-{% include "./learning-objectives.md" %}
+## Resources
+
+- [Quiz - React Week 1 - 28/05/2020](https://docs.google.com/forms/d/e/1FAIpQLScF624jfjHCVzrqfu9sR-MWYyaZD3vRGHz3pDjUgbfyJ4vq_A/viewform)
+  - Created by Chris Owen
+- [Video - Job Listing Homework Introduction - 29/05/2020](https://youtu.be/-wLrSkSABzQ)
+  - Created by Subhav Gautam
+
+## Solutions
+
+- [PokeDex In-Class - Exercise Solution - 05/06/2020](https://github.com/CodeYourFuture/pokedex-solution)
+  - Created by London and Ali Smith
 
 ## Notes for mentors
 
@@ -17,7 +27,7 @@
   - Although don't spend too much time on it - the student's don't know about other frameworks, and so don't really care about other approaches
   - Also useful to identify why the React api is improved over the vanilla DOM apis
 - JSX section
-  - Open the Babel REPL (https://babeljs.io/repl/) - demonstrate that there isn't any magic in JSX
+  - Open the [Babel REPL](https://babeljs.io/repl/) - demonstrate that there isn't any magic in JSX
   - Just React.createElement calls with syntax sugar
 - Installing Create-React-App
   - This should be set as homework ahead of the lesson
