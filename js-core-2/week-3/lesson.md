@@ -4,7 +4,7 @@
 
 **Teaching this lesson?**
 
-Read the Mentors Notes [here](./mentors.md)
+Read the Mentors Notes [here](mentors.md)
 
 ---
 
@@ -13,7 +13,6 @@ Read the Mentors Notes [here](./mentors.md)
 - [Synchronous and Asynchronous programming](#synchronous-and-asynchronous-programming)
   - [A real life example](#a-real-life-example)
   - [A Javascript example](#a-javascript-example)
-  - [The Callstack](#the-callstack)
   - [Callbacks](#callbacks)
     - [Exercise (1)](#exercise-1)
 - [How does the web work?](#how-does-the-web-work)
@@ -72,43 +71,6 @@ setTimeout(function () {
 }, 1000);
 console.log("Third action");
 ```
-
-### The Callstack
-
-How does JavaScript 'know' what order its code should be run in?
-
-JavaScript is a single-threaded language, which means that normally it can handle one task at a time or a piece of code at a time. It orders what it needs to do using something called the `call stack`.
-
-The call stack is a data structure that works by the "Last in, First out" principle (LIFO) to store and run functions. Whenever you call a function, it gets pushed onto the stack, and when the function returns, it is popped off of the call stack.
-
-This is why when you get an error in Javascript, you may see multiple lines with line numbers in the error, like:
-
-```
-$ node my.js
-/home/dwh/my.js:2
-    console.log(message);
-                ^
-
-ReferenceError: message is not defined
-    at logSomething (/home/dwh/my.js:2:17)
-    at computeSomething (/home/dwh/my.js:6:5)
-    at Object.<anonymous> (/home/dwh/my.js:9:1)
-    at Module._compile (internal/modules/cjs/loader.js:689:30)
-    at Object.Module._extensions..js (internal/modules/cjs/loader.js:700:10)
-    at Module.load (internal/modules/cjs/loader.js:599:32)
-    at tryModuleLoad (internal/modules/cjs/loader.js:538:12)
-    at Function.Module._load (internal/modules/cjs/loader.js:530:3)
-    at Function.Module.runMain (internal/modules/cjs/loader.js:742:12)
-    at startup (internal/bootstrap/node.js:266:19)
-```
-
-This error happened because of a problem in the `logSomething` function on line 2, which was called by the `computeSomething` function on line 6, and so on. Each line represents one entry on the call stack.
-
-Since there is only one call stack in Javascript, function execution is done one at a time from top to bottom. This means that the last function that gets pushed into the call stack is always the one to be executed when the call stack is popped. Think of it like pushing to, and popping from, an array; it's always the last item of the array that is affected.
-
-> [Let's use this tool to see how the Callstack works!](http://latentflip.com/loupe/)
-
-> So, how to the `call stack` and `asynchronous` work together? Asynchronous programming essentially helps us to make JavaScript act like a multi-threaded language -- although JavaScript only has a single call stack managing function execution, coding our JavaScript asynchronously means that we can have several functions executing at the same time.
 
 ### Callbacks
 
